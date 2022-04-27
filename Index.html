@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<style>
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main main right'
+    'footer footer footer footer footer footer';
+    width: 100vw;
+    height: 100vh;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding-bottom: 0px;
+  font-size: 30px;
+}
+
+
+.topnav {
+    padding: 20px;
+   overflow: hidden;
+   margin: 10px; 
+
+  
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: center;
+  color: #262E5F;
+  text-align: center;
+  padding: 20px 70px;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #FFD205;
+  color: #262E5F;
+  padding: 20px 70px;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #FFD205;
+  color: #262E5F;
+  padding: 20px 70px;
+  margin: 20px;
+  border-radius: 20px;
+  
+}
+
+
+.item2{
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+
+.item3 {
+    margin-top: 100px;
+    margin-bottom: 150px;
+    
+}
+.item4{ 
+    margin-top: 100px;
+    margin-bottom: 150px;
+
+
+}
+
+.btn{ align-content: center;
+font-size:25px;
+padding: 20px 90px;
+border-radius: 20px;
+color:#262E5F;
+background-color: #FFD205;
+cursor: pointer;
+margin-bottom: 50px;
+
+} 
+
+.btn:hover{
+  background-color: #262E5F;
+  color: #FFD205;
+
+}
+
+h2 {
+    color: #262E5F;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.grid-container2{
+    display: grid;
+  grid-template-columns: auto auto auto;
+  background-color:#262E5F;
+  padding: 40px;
+
+}
+.footer2{
+    font-size: 15px;
+    color: aliceblue;
+   
+}
+
+.footer1{
+    font-size: 15px;
+    color:white;
+   
+}
+.footer2{
+    font-size: 15px;
+    color: aliceblue;
+   
+}
+.footer3{
+    font-size: 15px;
+    color: aliceblue;
+   
+}
+a:link {
+  color:#FFD205;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
+
+</style>
+</head>
+<body>
+
+
+<div class="grid-container">
+  <div class="item1">
+      <img src="logo.png" width="300" max-height="200">
+      <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="https://helpthedogfly.com/about">About</a>
+        <a href="https://helpthedogfly.com/">Volunteer</a>
+        <a href="quiz1.html">Learn</a>
+      </div>
+</div>
+  <div class="item2"><img src="Homedog.gif" width="200" max-height="300">
+    </div>
+  
+  <div class="item3"> 
+      <h2>Do you want to adopt a dog?</h2>
+      <button class="btn" onclick="location.href='quiz2.html'"> MAKE A QUIZ </button>
+    </div>  
+
+  <div class="item4">
+    <img src="arrow.gif" width="250" max-height="300">
+    </div>
+    
+  <div class="item5">
+      <div class="grid-container2">
+          <div class="footer1"> Help dogs
+            <a href="https://helpthedogfly.com/donate" target="_blank"> donating </a></div>
+          <div class="footer2"> © 2022 - Help The Dog Fly<br>
+            Design with 💛 by <a style="color:#FFD205"href="https://soymartanegro.com/" target="_blank">Marta Negro</a> </div>
+          <div class="footer3">
+            Contact us: <br>
+            woof@helpthedogfly.com
+            </div>
+      </div>
+  </div>
+</div>
+
+</body>
+</html>

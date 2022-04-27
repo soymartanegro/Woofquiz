@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="stylequiz2.css">
+</head>
+<body>
+<div id="main"><!-- open main div -->
+<div id="header"><!-- open header div -->
+    <ul>
+        <li><a href="quiz1.html">Learn</a></li>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="https://helpthedogfly.com/about">About</a></li>
+        <li><a href="https://helpthedogfly.com/donate">Donate</a></li>
+        
+      </ul>
+    <div><h1>Are you ready to adopt a dog?</h1></div>
+
+</div><!-- close header div -->
+<form id="form">
+<div class="grid-container"><!--open grid questions-->
+  
+<div ><h3>Have you ever had a dog?</h3>
+
+<label for="var_yes"><input type="radio" name="dog" value="20" id="var_yes" />Yes.</label> 
+<br>
+ <br>   
+<label for="var_no"><input type="radio" name="dog" value="0" id="var_no" />No.</label>
+<br>
+</div>
+
+<div>
+     <h3>Does everyone in your family want a dog?</h3>
+        <label for="var_yes"><input type="radio" name="family" value="20" id="var_yes"/>Yes.</label>
+        <br>
+        <br>
+        <label for="var_no"><input type="radio" name="family" value="0" id="var_no" />No.</label>
+        
+ </div>
+ <div>
+    <h3>Can you tolerate some damage to your furniture and clothes until your dog is trained?</h3>
+       <label for="sub_live"><input type="radio" name="furniture" value="20" id="sub_live"/>I can live with it, material things are transitory</label>
+       <br>
+       <br>
+        <label for="sub_noteasy"><input type="radio" name="furniture" value="0" id="sub_noteasy"/>It's not going to be easy, but I'll try to tolerate.</label>
+        <br>
+        <br>
+       <label for="sub_adult"><input type="radio" name="furniture" value="20" id="sub_adult"/>No, which is why I'm adopting an adult dog.</label>
+   </div>
+
+   <div>
+
+    <h3>What arrangements will you make for your dog during the day when you can't be there?</h3>
+       <label for="dog_yard"><input type="radio" name="arrangements" value="0" id="dog_yard" />	I'll leave him indoors or in the yard, wherever he's happiest</label>
+        <br>
+        <br>
+        <label for="dog_home"><input type="radio" name="arrangements" value="20" id="dog_home" />	No problem,I'm home most days.</label>
+       <br>
+       <br>
+       <label for="dog_walked"><input type="radio" name="arrangements" value="10" id="dog_walked" />	Even if I'm not home I'll make sure he's walked.</label>
+   </div>
+
+   <div>
+    <h3>Are you willing to take off up to a week to be with your new dog or puppy when you first bring him home?</h3>
+    <label for="week_offno"><input type="radio" name="week" value="0" id="week_offno" />No</label>
+    <br>
+    <br>
+    <label for="week_offyes"><input type="radio" name="week" value="20" id="week_offyes" />Yes</label>
+    <br>
+    <br>
+    <label for="week_off"><input type="radio" name="week" value="10" id="week_off" />I Don't Know</label>
+    </div>
+
+    <div id="div"> <!--open div with button and results-->
+        <div class="button-container">
+            <button class="button" type="submit" value="Submit"> Am I ready? </button>
+            </div>
+            
+    <p>Your grade is: <span id="grade"> </span>
+     </p>
+     <p id="grade2"></p>
+
+
+<a href="quiz1.html">Learn about dogs</p>
+   
+    </div> <!--close div with button and results-->
+
+
+
+   
+   
+    
+
+
+</div> <!--close grid questions-->
+
+</form>
+    
+</div><!-- close main div -->
+
+
+
+
+
+
+<script>
+    document.getElementById("form").onsubmit=function() {
+           dog = parseInt(document.querySelector('input[name = "dog"]:checked').value);
+           family = parseInt(document.querySelector('input[name = "family"]:checked').value);
+           furniture = parseInt(document.querySelector('input[name = "furniture"]:checked').value);
+           arrangements = parseInt(document.querySelector('input[name = "arrangements"]:checked').value);
+           week = parseInt(document.querySelector('input[name = "week"]:checked').value);
+           
+    
+            
+           
+    
+           result = dog + family + furniture + arrangements + week;
+           
+
+    
+            document.getElementById("grade").innerHTML = result;
+
+            if (result  <= 50) {textresult = "<img src='nodog.gif' width='200' /><br /> Don't get a dog for now, please.."};
+            if (result  >= 51 && result <=79) {textresult = "<img src='thinkingDog.gif' width='200' /><br />  Think about it a bit. "};
+            if (result  >= 80) {textresult = "<img src='doglove.gif' width='200' /><br /> You are super ready to rescue a dog"};
+            document.getElementById("grade2").innerHTML = textresult;
+
+    
+    return false; 
+    } 
+
+
+    
+    </script>
+    
+    
+</body>
