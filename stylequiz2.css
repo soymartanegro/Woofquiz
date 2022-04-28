@@ -18,7 +18,7 @@ li {
 li a {
   display: block;
   color:#262E5F
-  text-align;center;
+  text-align:center;
   padding:16px;
   text-decoration:none;
 }
@@ -54,7 +54,7 @@ li a:hover {
     border-radius: 10px;
     color:whitesmoke;
     font-family: sans-serif;
-    
+   
     }
     
     #header {
